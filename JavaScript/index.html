@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <h2>My first JavaScript</h2>
+    <p id="demo">JavaScript can change HTML content.</p>
+    <button
+      type="button"
+      onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'
+    >
+      Click Me!
+    </button>
+    <h2>JavaScript can change the style</h2>
+    <p id="change">JavaScript can change the style of an HTML element.</p>
+    <button
+      type="button"
+      onclick="document.getElementById('change').style.fontSize='35px'"
+    >
+      Click Me!
+    </button>
+
+    <h2>JavaScript can hide</h2>
+    <p id="hide">JavaScript can hide HTML elements.</p>
+    <button
+      type="button"
+      onclick="document.getElementById('hide').style.display='none'"
+    >
+      Click Me!
+    </button>
+
+    <h2>JavaScript can show hidden HTML elements</h2>
+    <p id="hidden" style="display: none">Hello JavaScript!</p>
+    <button
+      type="button"
+      onclick="document.getElementById('hidden').style.display='block'"
+    >
+      Click Me!
+    </button>
+
+    <h2>External JavaScript</h2>
+    <p id="external">A Paragraph.</p>
+    <button type="button" onclick="changeText()">Try it</button>
+
+    <h2>JavaScript code changes the content of the element with id="date"</h2>
+    <button onclick="document.getElementById('date').innerHTML=Date()">
+      The time is?
+    </button>
+    <p id="date"></p>
+
+    <h2>JavaScript HTML Events</h2>
+    <button onclick="this.innerHTML=Date()">The time is?</button>
+
+    <h2>JavaScript String Methods</h2>
+    <button onclick="replaceString()">Click!</button>
+    <p id="replace">Outside is sunny!</p>
+
+    <script>
+      function replaceString() {
+        let text = document.getElementById("replace").innerHTML;
+        document.getElementById("replace").innerHTML = text.replace(
+          "sunny",
+          "a storm"
+        );
+      }
+    </script>
+
+    <h2>JavaScript Arrays</h2>
+    <p id="fruits"></p>
+
+    <h2>Push Method</h2>
+    <button onclick="functionPush()">Try it</button>
+    <p id="push"></p>
+
+    <h2>Array Sort</h2>
+    <button onclick="arraySort()">Try it</button>
+    <p id="sort"></p>
+
+    <h2>Nested objects and arrays</h2>
+    <p id="nested"></p>
+
+    <h2>Display object properties</h2>
+    <p id="person"></p>
+
+    <script src="script.js"></script>
+  </body>
+</html>
